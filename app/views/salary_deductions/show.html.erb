@@ -1,0 +1,16 @@
+<!-- app/views/salary_deductions/show.html.erb -->
+
+<p style="color: green"><%= notice %></p>
+
+<p>Total Hours Pay: <%= @salary_deduction.total_hours_pay %></p>
+<p>Tax: <%= @salary_deduction.tax_fee %></p>
+<p>Pension: <%= @salary_deduction.pension_fee %></p>
+<p>Gross Pay: <%= @salary_deduction.grosspay %></p>
+<p>Net_salary: <%= @salary_deduction.total_pay_after_deduction %></p>
+
+<div>
+  <%= link_to "Edit this salary deduction", edit_salary_deduction_path(@salary_deduction) %> |
+  <%= link_to "Back to salary deductions", salary_deductions_path %>
+
+  <%= button_to "Destroy this salary deduction", @salary_deduction, method: :delete %>
+</div>

@@ -1,0 +1,4 @@
+root: C:\Ruby33-x64\payroll_system 
+path: C:\Program Files\nodejs 
+arch: 64 
+proxy: none

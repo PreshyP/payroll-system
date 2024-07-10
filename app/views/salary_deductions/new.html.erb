@@ -1,0 +1,50 @@
+  <h1>New salary deduction</h1>
+
+    <!-- views/salary_deductions/new.html.erb -->
+<form action="/salary_deductions" accept-charset="UTF-8" method="post">
+  <input type="hidden" name="authenticity_token" value="jCVD8CIJA0CAGOogQVpRT86L85hjY_9verBaK78JRL2K5Xg-Dliy7lyBwyWaadocjbrqXqMKhzOIvdr2dr2ncQ" autocomplete="off" />
+  
+  <div class="field">
+    <label for="salary_deduction_staff_id">Staff ID</label>
+    <input type="text" name="salary_deduction[staff_id]" id="salary_deduction_staff_id" /> <!-- Remove readonly attribute -->
+  </div>
+
+  <div class="field">
+    <label for="salary_deduction_staff_name">Staff name</label>
+    <input type="text" name="salary_deduction[staff_name]" id="salary_deduction_staff_name" /> <!-- Remove readonly attribute -->
+  </div>
+
+      <div class="field">
+        <label for="salary_deduction_total_days_worked">Total days worked</label>
+        <input type="number" name="salary_deduction[total_days_worked]" id="salary_deduction_total_days_worked" /> <!-- Editable -->
+      </div>
+
+      <div class="field">
+        <label for="salary_deduction_hours_worked">Hours worked</label>
+        <input type="number" name="salary_deduction[hrs_worked]" id="salary_deduction_hrs_worked" /> <!-- Editable -->
+      </div>
+
+      <div class="field">
+        <label for="salary_deduction_tax_fee">Tax fee</label>
+        <input type="number" name="salary_deduction[tax_fee]" id="salary_deduction_tax_fee" /> <!-- Editable -->
+      </div>
+
+      <div class="field">
+        <label for="salary_deduction_pension_fee">Pension fee</label>
+        <input type="number" name="salary_deduction[pension_fee]" id="salary_deduction_pension_fee" /> <!-- Editable -->
+      </div>
+
+      <div class="field">
+        <label for="salary_deduction_net_pay">Net pay</label>
+        <input type="number" name="salary_deduction[net_pay]" id="salary_deduction_net_pay" />
+      </div>
+
+        <div class="actions">
+    <input type="submit" name="commit" value="Create Salary Deduction" class="btn btn-primary" data-disable-with="Create Salary Deduction" />
+    <a class="btn btn-secondary" href="/staffs">Back to Staffs</a>
+  </div>
+    </form>
+
+  </div>
+</body>
+</html>

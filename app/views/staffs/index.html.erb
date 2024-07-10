@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Staffs</h1>
+
+<div id="staffs">
+  <% @staffs.each do |staff| %>
+    <%= render staff %>
+    <p>
+      <%= link_to "Show this staff", staff %>
+    </p>
+  
+</div>
+
+<%= link_to "New staff", new_staff_path %>
+ <tr>
+    <td><%= staff.id %></td>
+    <td><%= staff.name %></td>
+    <td><%= staff.lastname %></td>
+    <td><%= staff.job_title %></td>
+    <td><%= link_to 'Show', staff_path(staff), class: 'btn btn-primary' %></td>
+    <td>
+      <%= link_to 'Salary Deduction', new_salary_deduction_path(staff_id: staff.id), class: 'btn btn-secondary' %>
+    </td>
+  </tr>
+<% end %>

@@ -1,0 +1,2 @@
+module SalaryDeductionsHelper
+end

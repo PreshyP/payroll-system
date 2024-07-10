@@ -1,0 +1,48 @@
+<!-- app/views/salary_deductions/_form.html.erb -->
+<%= form_with(model: @salary_deduction, local: true) do |form| %>
+  <% if @salary_deduction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@salary_deduction.errors.count, "error") %> prohibited this salary_deduction from being saved:</h2>
+      <ul>
+        <% @salary_deduction.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :staff_id %>
+    <%= form.text_field :staff_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name, "Staff name" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_days_worked %>
+    <%= form.number_field :total_days_worked %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hours_worked %>
+    <%= form.number_field :hours_worked %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tax_fee %>
+    <%= form.number_field :tax_fee %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pension_fee %>
+    <%= form.number_field :pension_fee %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Create Salary Deduction", class: "btn btn-primary" %>
+    <%= link_to "Back to Staffs", staffs_path, class: "btn btn-secondary" %>
+  </div>
+<% end %>

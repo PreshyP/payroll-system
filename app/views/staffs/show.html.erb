@@ -1,0 +1,67 @@
+<p style="color: green"><%= notice %></p>
+
+<p>
+  <strong>Staff ID:</strong>
+  <%= @staff.staff_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @staff.name %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @staff.lastname %>
+</p>
+
+<p>
+  <strong>Job Title:</strong>
+  <%= @staff.job_title %>
+</p>
+
+<p>
+  <strong>Total Hours:</strong>
+  <%= @staff.total_hours %>
+</p>
+
+<p>
+  <strong>Total Days Worked:</strong>
+  <%= @staff.total_days_worked %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @staff.salary %>
+</p>
+
+<h2>Deductions</h2>
+<p>
+  <strong>Total Salary:</strong>
+  <%= @deductions[:total_salary] %>
+</p>
+<p>
+  <strong>Total Tax:</strong>
+  <%= @deductions[:total_tax] %>
+</p>
+<p>
+  <strong>Total Pension:</strong>
+  <%= @deductions[:total_pension] %>
+</p>
+<p>
+  <strong>Net Salary:</strong>
+  <%= @deductions[:net_salary] %>
+</p>
+
+<%= link_to 'Edit', edit_staff_path(@staff) %> |
+<%= link_to 'Back', staffs_path %>
+
+
+<%= render @staff %>
+
+<div>
+  <%= link_to "Edit this staff", edit_staff_path(@staff) %> |
+  <%= link_to "Back to staffs", staffs_path %>
+<%= link_to 'Add Salary Deduction', new_salary_deduction_path(staff_id: @staff.id), class: 'btn btn-primary' %>
+  <%= button_to "Destroy this staff", @staff, method: :delete %>
+</div>

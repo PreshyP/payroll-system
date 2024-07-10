@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Salary deductions</h1>
+
+<div id="salary_deductions">
+  <% @salary_deductions.each do |salary_deduction| %>
+    <%= render salary_deduction %>
+    <p>
+      <%= link_to "Show this salary deduction", salary_deduction %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New salary deduction", new_salary_deduction_path %>
